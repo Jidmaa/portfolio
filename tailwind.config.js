@@ -4,8 +4,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
-      primary: "#3B485F",
+      primary: "#222A36",
       white: "#FFFFFF",
+      secondary: "#3AAFC9",
     },
     extend: {
       fontFamily: {

@@ -1,6 +1,27 @@
 import React from "react";
 import picture from "../picture.png";
+import { motion } from "framer-motion";
 export const Navbar = ({ children }) => {
+  const line1 = "Software engineer and ";
+  const line2 = "developer, I love to code and make your";
+  const line3 = " ideas come true.";
+  const sentence = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.1,
+        staggerChildren: 0.1,
+      },
+    },
+  };
+  const letter = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+  };
   return (
     <div className="bg-primary">
       <div className=" font-sans bg-picture bg-contain bg-left bg-no-repeat h-screen sm:px-0 lg:px-40 lg:w-screen w-max sm:w-max pt-16">
@@ -38,11 +59,28 @@ export const Navbar = ({ children }) => {
             <div className="flex flex-col justify-around h-3/5">
               {" "}
               <span className="text-inverted text-sm"> / THIS IS ME </span>{" "}
-              <div className="text-white text-4xl">
-                {" "}
-                Software engineer and developer, I love to code and make your
-                ideas come true.{" "}
-              </div>
+              <motion.div
+                className="text-white text-4xl"
+                variants={sentence}
+                initial="hidden"
+                animate="visible"
+              >
+                {line1.split("").map((char, index) => (
+                  <motion.span key={char + "-" + index} variants={letter}>
+                    {char}
+                  </motion.span>
+                ))}
+                {line2.split("").map((char, index) => (
+                  <motion.span key={char + "-" + index} variants={letter}>
+                    {char}
+                  </motion.span>
+                ))}
+                {line3.split("").map((char, index) => (
+                  <motion.span key={char + "-" + index} variants={letter}>
+                    {char}
+                  </motion.span>
+                ))}
+              </motion.div>
               <span className="text-inverted text-md">
                 {" "}
                 Young and passionate about everything tech and code, I am eager
@@ -51,7 +89,24 @@ export const Navbar = ({ children }) => {
                 contact me.
               </span>
             </div>
-            <div className="circle "> </div>
+            <div>
+              <svg width="300" height="300">
+                <circle cx="150" cy="150" r="100" fill="#3AAFC9" />
+                <text
+                  x="58%"
+                  y="40%"
+                  text-anchor="middle"
+                  fill="white"
+                  font-size="25px"
+                  font-family="Arial"
+                  dy=".3em"
+                  className="transform rotate-12"
+                >
+                  Web Developer
+                </text>
+                Sorry, your browser does not support inline SVG.
+              </svg>
+            </div>
           </div>
         </div>
       </div>

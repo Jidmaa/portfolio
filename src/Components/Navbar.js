@@ -2,22 +2,22 @@ import React from "react";
 import picture from "../picture.png";
 import { motion } from "framer-motion";
 export const Navbar = ({ children }) => {
-  const line1 = "Software engineer and ";
-  const line2 = "developer, I love to code and make your";
-  const line3 = " ideas come true.";
+  const line1 = "Majid ";
+  const line2 = "Benhenneda";
+
   const sentence = {
-    hidden: { opacity: 1 },
-    visible: {
+    initial: { opacity: 1 },
+    animate: {
       opacity: 1,
       transition: {
         delay: 0.1,
-        staggerChildren: 0.1,
+        staggerChildren: 0.2,
       },
     },
   };
   const letter = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
+    initial: { opacity: 0, y: 50 },
+    animate: {
       opacity: 1,
       y: 0,
     },
@@ -47,8 +47,24 @@ export const Navbar = ({ children }) => {
               ))}
             </div>
             <div>
-              <h1 className="text-white text-7xl font-bold"> Majid</h1>
-              <h1 className="text-white text-7xl font-bold"> Benhenneda </h1>
+              <motion.h1
+                initial="initial"
+                variants={sentence}
+                animate="animate"
+                className="text-white text-7xl font-bold"
+              >
+                {line1.split("").map((char, index) => (
+                  <motion.span key={char + "-" + index} variants={letter}>
+                    {char}
+                  </motion.span>
+                ))}
+                <br />
+                {line2.split("").map((char, index) => (
+                  <motion.span key={char + "-" + index} variants={letter}>
+                    {char}
+                  </motion.span>
+                ))}
+              </motion.h1>{" "}
             </div>
           </div>
           <div className="flex flex-col justify-around  h-full w-1/3  ">
@@ -59,28 +75,10 @@ export const Navbar = ({ children }) => {
             <div className="flex flex-col justify-around h-3/5">
               {" "}
               <span className="text-inverted text-sm"> / THIS IS ME </span>{" "}
-              <motion.div
-                className="text-white text-4xl"
-                variants={sentence}
-                initial="hidden"
-                animate="visible"
-              >
-                {line1.split("").map((char, index) => (
-                  <motion.span key={char + "-" + index} variants={letter}>
-                    {char}
-                  </motion.span>
-                ))}
-                {line2.split("").map((char, index) => (
-                  <motion.span key={char + "-" + index} variants={letter}>
-                    {char}
-                  </motion.span>
-                ))}
-                {line3.split("").map((char, index) => (
-                  <motion.span key={char + "-" + index} variants={letter}>
-                    {char}
-                  </motion.span>
-                ))}
-              </motion.div>
+              <div className="text-white text-4xl">
+                Software engineer and developer, I love to code and make your
+                ideas come true.
+              </div>
               <span className="text-inverted text-md">
                 {" "}
                 Young and passionate about everything tech and code, I am eager
@@ -100,7 +98,7 @@ export const Navbar = ({ children }) => {
                   font-size="25px"
                   font-family="Arial"
                   dy=".3em"
-                  className="transform rotate-12"
+                  className="transform rotate-12 "
                 >
                   Web Developer
                 </text>

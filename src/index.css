@@ -2,3 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+.circle {
+  position: relative;
+  display: flex;
+  justify-items: center;
+  border-radius: 50%;
+  width: 55%;
+  height: auto;
+  padding-top: 55%;
+  background: #3AAFC9;
+  color: white;
+  right: 25%
+  }

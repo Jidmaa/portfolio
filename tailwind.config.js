@@ -13,6 +13,9 @@ module.exports = {
       fontFamily: {
         sans: ["Roboto", ...defaultTheme.fontFamily.sans],
       },
+      backgroundImage: {
+        picture: "url('picture.png')",
+      },
     },
   },
   variants: {

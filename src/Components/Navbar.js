@@ -51,7 +51,7 @@ export const Navbar = ({ children }) => {
                 initial="initial"
                 variants={sentence}
                 animate="animate"
-                className="text-white text-7xl font-bold"
+                className="text-white text-8xl font-bold"
               >
                 {line1.split("").map((char, index) => (
                   <motion.span key={char + "-" + index} variants={letter}>

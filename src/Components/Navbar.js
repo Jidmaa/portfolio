@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import github from "../assets/github.svg";
 import twitter from "../assets/twitter.svg";
 import linkedin from "../assets/linkedin.svg";
+import arrow from "../assets/arrow.svg";
 export const Navbar = ({ children }) => {
   const line1 = "Majid ";
   const line2 = "Benhenneda";
@@ -37,26 +38,42 @@ export const Navbar = ({ children }) => {
   };
   return (
     <div className="bg-bg  w-screen h-max flex  text-text">
-      <div className="text-primary text-2xl font-black italic border-r border-b border-primary w-max   px-2 py-3 ">
+      <div className="text-primary text-2xl font-black italic border-r border-b border-primary w-16 pl-2  pr-6 py-3 ">
         MB
       </div>
-      <div className=" w-2/5 flex space-between w flex-row items-center border-b border-r border-primary">
-        <a className="px-8" href="http://www.github.com/Jidmaa">
-          <img src={github} alt="github" />
+      <div className=" xl:w-2/5 w-screen flex xl:justify-start justify-evenly w flex-row items-center border-b border-r border-primary">
+        <a className=" xl:px-8 xl:px-4 " href="http://www.github.com/Jidmaa">
+          <img className="text-primary" src={github} alt="github" />
         </a>
-        <a className="px-8" href="http://www.twitter.com/MajidBenhenneda">
+        <a
+          className="xl:px-8  xl:px-4 "
+          href="http://www.twitter.com/MajidBenhenneda"
+        >
           <img src={twitter} alt="twitter" />
         </a>
-        <a className="px-8" href="htpp://www.linkedin.com">
+        <a className="xl:px-8 xl:px-4 " href="htpp://www.linkedin.com">
           <img src={linkedin} alt="linkedin" />
         </a>
       </div>
-      <div className=" flex-grow flex items-center border-b border-primary">
-        <span className="text-xl px-8 font-normal text-primary"> Home </span>
-        <span className="text-xl px-8 font-normal"> Projects </span>
-        <span className="text-xl px-8 font-normal"> About me </span>
-        <span className="text-xl px-8 font-normal"> Contact me </span>
-        <span className="ml-auto px-8 "> madjibenhenneda@gmail.com</span>
+      <div className="xl:flex xl:text-xl justify-evenly  text-lg flex-grow hidden items-center border-b border-primary">
+        <span className=" cursor-pointer ml-auto  font-normal text-primary">
+          Home
+        </span>
+        <span className=" ml-auto cursor-pointer hover:text-primary font-normal">
+          {" "}
+          Projects{" "}
+        </span>
+        <span className="  ml-auto cursor-pointer hover:text-primary font-normal">
+          About
+        </span>
+        <span className=" ml-auto cursor-pointer hover:text-primary font-normal">
+          {" "}
+          Contact{" "}
+        </span>
+        <div className="ml-auto flex items-center px-8 font-bold ">
+          majidbenhenneda@gmail.com
+          <img className="pl-2" src={arrow} alt="arrow" />
+        </div>
       </div>
     </div>
   );

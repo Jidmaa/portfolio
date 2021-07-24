@@ -4,17 +4,17 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
-      primary: "#222A36",
-      white: "#FFFFFF",
-      secondary: "#3AAFC9",
+      bg: "#252525",
+      text: "#E2DCC8",
+      primary: "#B66449",
       inverted: "#5F646C",
     },
     extend: {
       fontFamily: {
-        sans: ["Roboto", ...defaultTheme.fontFamily.sans],
+        sans: ["HelveticaNeueCyr", ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
-        picture: "url('picture.png')",
+        picture: "url('noisy-background.jpg')",
       },
     },
   },

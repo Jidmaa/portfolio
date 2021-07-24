@@ -1,6 +1,9 @@
 import React from "react";
 import picture from "../picture.png";
 import { motion } from "framer-motion";
+import github from "../assets/github.svg";
+import twitter from "../assets/twitter.svg";
+import linkedin from "../assets/linkedin.svg";
 export const Navbar = ({ children }) => {
   const line1 = "Majid ";
   const line2 = "Benhenneda";
@@ -22,91 +25,38 @@ export const Navbar = ({ children }) => {
       y: 0,
     },
   };
+  const navLetters = {
+    animate: { y: -25 },
+    initial: { y: 0 },
+  };
+  const navSentence = {
+    animate: {
+      transition: { delay: 1.2, staggerChildren: 1.2 },
+    },
+    initial: { opacity: 1 },
+  };
   return (
-    <div className="bg-primary">
-      <div className=" font-sans bg-picture bg-contain bg-left bg-no-repeat h-screen sm:px-0 lg:px-40 lg:w-screen w-max sm:w-max pt-16">
-        <div className="flex justify-between w-full h-full">
-          <div className="flex flex-col justify-between h-5/6 items-begin">
-            <div className="flex justify-between  w-72">
-              {children.map((child, index) => (
-                <h1
-                  className={`font-semibold text-white text-2xl ${
-                    index === 0 ? null : "opacity-50"
-                  } `}
-                  key={index}
-                >
-                  {child}
-                  <span
-                    className={`text-${
-                      index === 0 ? "secondary" : "white"
-                    } font-extrabold text-2xl`}
-                  >
-                    .
-                  </span>
-                </h1>
-              ))}
-            </div>
-            <div>
-              <motion.h1
-                initial="initial"
-                variants={sentence}
-                animate="animate"
-                className="text-white text-8xl font-bold"
-              >
-                {line1.split("").map((char, index) => (
-                  <motion.span key={char + "-" + index} variants={letter}>
-                    {char}
-                  </motion.span>
-                ))}
-                <br />
-                {line2.split("").map((char, index) => (
-                  <motion.span key={char + "-" + index} variants={letter}>
-                    {char}
-                  </motion.span>
-                ))}
-              </motion.h1>{" "}
-            </div>
-          </div>
-          <div className="flex flex-col justify-around  h-full w-1/3  ">
-            <h1 className=" font-semibold text-white text-2xl ">
-              {" "}
-              Majid<span className="text-secondary font-bold">/</span>B.
-            </h1>
-            <div className="flex flex-col justify-around h-3/5">
-              {" "}
-              <span className="text-inverted text-sm"> / THIS IS ME </span>{" "}
-              <div className="text-white text-4xl">
-                Software engineer and developer, I love to code and make your
-                ideas come true.
-              </div>
-              <span className="text-inverted text-md">
-                {" "}
-                Young and passionate about everything tech and code, I am eager
-                to learn on a daily basis. What I love the most is making an
-                idea come true, so if you have any projects, don't hesitate to
-                contact me.
-              </span>
-            </div>
-            <div>
-              <svg width="300" height="300">
-                <circle cx="150" cy="150" r="100" fill="#3AAFC9" />
-                <text
-                  x="58%"
-                  y="40%"
-                  text-anchor="middle"
-                  fill="white"
-                  font-size="25px"
-                  font-family="Arial"
-                  dy=".3em"
-                  className="transform rotate-12 "
-                >
-                  Web Developer
-                </text>
-                Sorry, your browser does not support inline SVG.
-              </svg>
-            </div>
-          </div>
-        </div>
+    <div className="bg-bg  w-screen h-max flex  text-text">
+      <div className="text-primary text-2xl font-black italic border-r border-b border-primary w-max   px-2 py-3 ">
+        MB
+      </div>
+      <div className=" w-2/5 flex space-between w flex-row items-center border-b border-r border-primary">
+        <a className="px-8" href="http://www.github.com/Jidmaa">
+          <img src={github} alt="github" />
+        </a>
+        <a className="px-8" href="http://www.twitter.com/MajidBenhenneda">
+          <img src={twitter} alt="twitter" />
+        </a>
+        <a className="px-8" href="htpp://www.linkedin.com">
+          <img src={linkedin} alt="linkedin" />
+        </a>
+      </div>
+      <div className=" flex-grow flex items-center border-b border-primary">
+        <span className="text-xl px-8 font-normal text-primary"> Home </span>
+        <span className="text-xl px-8 font-normal"> Projects </span>
+        <span className="text-xl px-8 font-normal"> About me </span>
+        <span className="text-xl px-8 font-normal"> Contact me </span>
+        <span className="ml-auto px-8 "> madjibenhenneda@gmail.com</span>
       </div>
     </div>
   );

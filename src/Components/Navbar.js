@@ -5,7 +5,9 @@ import github from "../assets/github.svg";
 import twitter from "../assets/twitter.svg";
 import linkedin from "../assets/linkedin.svg";
 import arrow from "../assets/arrow.svg";
+import { Link, useHistory } from "react-router-dom";
 export const Navbar = ({ children }) => {
+  const history = useHistory();
   const line1 = "Majid ";
   const line2 = "Benhenneda";
 
@@ -56,10 +58,16 @@ export const Navbar = ({ children }) => {
         </a>
       </div>
       <div className="xl:flex xl:text-xl justify-evenly  text-lg flex-grow hidden items-center border-b border-primary">
-        <span className=" cursor-pointer ml-auto  font-normal text-primary">
+        <span
+          onClick={() => history.push("/")}
+          className=" cursor-pointer ml-auto  font-normal text-primary"
+        >
           Home
         </span>
-        <span className=" ml-auto cursor-pointer hover:text-primary font-normal">
+        <span
+          onClick={() => history.push("/projects")}
+          className=" ml-auto cursor-pointer hover:text-primary font-normal"
+        >
           {" "}
           Projects{" "}
         </span>

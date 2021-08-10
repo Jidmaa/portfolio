@@ -72,8 +72,17 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="text-text flex items-center jusitfy-center ">
-          <img src={robot} />
+        <div className="text-text h-max relative flex items-center w-55 justify-center ">
+          <div className="mycircles ">
+            <div>
+              {" "}
+              <img src={robot} className="robot" alt="robot" />{" "}
+            </div>
+            <div className="text-3xl  contained">
+              {" "}
+              Let's automate your workflow :-){" "}
+            </div>{" "}
+          </div>
         </div>
       </div>
     </>

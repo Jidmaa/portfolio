@@ -72,7 +72,7 @@
   font-style: normal;
   font-display: swap;
 }
-
+/* 
 
 
 .circle {
@@ -86,4 +86,46 @@
   background: #3AAFC9;
   color: white;
   right: 25%
+  } */
+  .w-55 {
+  width: 55%;
   }
+  .circle {
+    width: 25vw;
+    display: flex;
+    vertical-align: middle;
+    border-radius: 50%; /* may require vendor prefixes */
+    border: 2px solid #B66449;
+    justify-content: center;
+    align-items: center;
+    padding-left: 45px;
+
+  }
+  .mycircles{
+    display: inline-flex;
+    width:62vw;
+  }
+  .mycircles:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .contained {
+    border:1px solid #B66449;
+    padding: 0 2vw;
+    text-align: center;
+  }
+  .mycircles div{
+    display: flex;
+    align-items: center;
+    box-sizing:border-box;
+    height:25vw;
+    float:left;
+    width:25vw;
+    margin-right:1vw;
+    border-radius:50%;
+  }
+ .robot {
+   position: relative;
+   left: 3vw;
+ }

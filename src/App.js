@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       {" "}
-      <div className="h-screen flex flex-col bg-bg">
+      <div className="max-h-full flex flex-col bg-bg">
         <Navbar>{["Home", "Works", "Contacts"]}</Navbar> <Home />
       </div>{" "}
     </>

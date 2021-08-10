@@ -2,72 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 @font-face {
-  font-family: 'HelveticaNeueCyr';
-  src: url('fonts/HelveticaNeueCyr-Black.woff2') format('woff2'),
-      url('fonts/HelveticaNeueCyr-Black.woff') format('woff');
+  font-family: "HelveticaNeueCyr";
+  src: url("fonts/HelveticaNeueCyr-Black.woff2") format("woff2"),
+    url("fonts/HelveticaNeueCyr-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'HelveticaNeueCyr';
-  src: url('fonts/HelveticaNeueCyr-Heavy.woff2') format('woff2'),
-      url('fonts/HelveticaNeueCyr-Heavy.woff') format('woff');
+  font-family: "HelveticaNeueCyr";
+  src: url("fonts/HelveticaNeueCyr-Heavy.woff2") format("woff2"),
+    url("fonts/HelveticaNeueCyr-Heavy.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'HelveticaNeueCyr';
-  src: url('fonts/HelveticaNeueCyr-Bold.woff2') format('woff2'),
-      url('fonts/HelveticaNeueCyr-Bold.woff') format('woff');
+  font-family: "HelveticaNeueCyr";
+  src: url("fonts/HelveticaNeueCyr-Bold.woff2") format("woff2"),
+    url("fonts/HelveticaNeueCyr-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'HelveticaNeueCyr';
-  src: url('fonts/HelveticaNeueCyr-Roman.woff2') format('woff2'),
-      url('fonts/HelveticaNeueCyr-Roman.woff') format('woff');
+  font-family: "HelveticaNeueCyr";
+  src: url("fonts/HelveticaNeueCyr-Roman.woff2") format("woff2"),
+    url("fonts/HelveticaNeueCyr-Roman.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'HelveticaNeueCyr';
-  src: url('fonts/HelveticaNeueCyr-UltraLight.woff2') format('woff2'),
-      url('fonts/HelveticaNeueCyr-UltraLight.woff') format('woff');
+  font-family: "HelveticaNeueCyr";
+  src: url("fonts/HelveticaNeueCyr-UltraLight.woff2") format("woff2"),
+    url("fonts/HelveticaNeueCyr-UltraLight.woff") format("woff");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'HelveticaNeueCyr';
-  src: url('fonts/HelveticaNeueCyr-Thin.woff2') format('woff2'),
-      url('fonts/HelveticaNeueCyr-Thin.woff') format('woff');
+  font-family: "HelveticaNeueCyr";
+  src: url("fonts/HelveticaNeueCyr-Thin.woff2") format("woff2"),
+    url("fonts/HelveticaNeueCyr-Thin.woff") format("woff");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'HelveticaNeueCyr';
-  src: url('fonts/HelveticaNeueCyr-Medium.woff2') format('woff2'),
-      url('fonts/HelveticaNeueCyr-Medium.woff') format('woff');
+  font-family: "HelveticaNeueCyr";
+  src: url("fonts/HelveticaNeueCyr-Medium.woff2") format("woff2"),
+    url("fonts/HelveticaNeueCyr-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'HelveticaNeueCyr';
-  src: url('fonts/HelveticaNeueCyr-Light.woff2') format('woff2'),
-      url('fonts/HelveticaNeueCyr-Light.woff') format('woff');
+  font-family: "HelveticaNeueCyr";
+  src: url("fonts/HelveticaNeueCyr-Light.woff2") format("woff2"),
+    url("fonts/HelveticaNeueCyr-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -87,45 +87,53 @@
   color: white;
   right: 25%
   } */
-  .w-55 {
+.w-55 {
   width: 55%;
-  }
-  .circle {
-    width: 25vw;
-    display: flex;
-    vertical-align: middle;
-    border-radius: 50%; /* may require vendor prefixes */
-    border: 2px solid #B66449;
-    justify-content: center;
-    align-items: center;
-    padding-left: 45px;
-
-  }
-  .mycircles{
-    display: inline-flex;
-    width:62vw;
-  }
-  .mycircles:after {
-    content: "";
-    display: table;
-    clear: both;
+}
+.circle {
+  width: 25vw;
+  display: flex;
+  vertical-align: middle;
+  border-radius: 50%; /* may require vendor prefixes */
+  border: 2px solid #b66449;
+  justify-content: center;
+  align-items: center;
+  padding-left: 45px;
+}
+.mycircles {
+  display: inline-flex;
+}
+.mycircles:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.contained {
+  border: 1px solid #b66449;
+  padding: 0 2vw;
+  font-size: 2vw;
+  text-align: center;
+}
+.mycircles div {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 25vw;
+  float: left;
+  width: 25vw;
+  margin-right: 1vw;
+  border-radius: 50%;
+}
+@media (max-width: 768px) {
+  .mycircles div {
+    height: 100%;
+    width: 100%;
   }
   .contained {
-    border:1px solid #B66449;
-    padding: 0 2vw;
-    text-align: center;
+    display: none !important;
   }
-  .mycircles div{
-    display: flex;
-    align-items: center;
-    box-sizing:border-box;
-    height:25vw;
-    float:left;
-    width:25vw;
-    margin-right:1vw;
-    border-radius:50%;
-  }
- .robot {
-   position: relative;
-   left: 3vw;
- }
+}
+.robot {
+  position: relative;
+  left: 3vw;
+}
